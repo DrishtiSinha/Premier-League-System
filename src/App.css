@@ -1,0 +1,529 @@
+body {
+  background-image: url(https://cdn.wallpapersafari.com/42/43/WpjdQo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title1 {
+  font-family: 'Bruno Ace SC', cursive;
+  text-align: center;
+  font-size: 60px;
+  color: whitesmoke;
+}
+.devtitle {
+  font-family: 'Dosis', sans-serif;
+  color: whitesmoke;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.devs {
+  display: flex;
+  justify-content: space-around;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  bottom: 0px;
+
+  width: 100%;
+  font-size: large;
+}
+.description {
+  
+  text-align: center;
+  color: whitesmoke;
+  /* width: 60%; */
+  font-size: larger;
+}
+/* .funcs */
+.func {
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 210px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.func:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 5px 2px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.func:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.func::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.func:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/* card */
+.card {
+  color: #1b1b1b;
+  width: 190px;
+  height: 254px;
+  position: relative;
+  outline: 6px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #0f83ff;
+  background-blend-mode: multiply;
+  background: linear-gradient(to top, #0f83ff, #0f83ff);
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+}
+
+.card-front {
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.pcard {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.card-back {
+  transform: translateX(120%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Text*/
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+/*Text divider*/
+.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  height: 2px;
+  margin: 2px auto;
+  background-color: #1b1b1b;
+}
+#tables {
+  display: none;
+}
+
+label {
+  color: #f5f5f5;
+  font-size: larger;
+}
+input {
+  height: 30px;
+}
+/*Hover*/
+.card:hover {
+  background-color: #1b1b1b25;
+}
+
+.card:hover .card-front {
+  transform: translateX(-100%);
+}
+
+.card:hover .card-back {
+  transform: translateX(0);
+}
+
+/* GRIDS */
+.parent {
+  display: grid; /*team fields*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.parentmatches {
+  margin-top: 40px;
+  display: grid; /*matches fields*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.parentPlayer {
+  margin-top: 50px; /*player fields*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  align-content: center;
+}
+.parentMan {
+  margin-top: 50px; /*player fields*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  align-content: center;
+}
+.gridContainer {
+  display: grid; /*player cards*/
+  margin-left: 160px;
+  margin-top: 30px;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  grid-column-gap: 100px;
+  grid-row-gap: 20px;
+}
+/* SHOW OFF */
+.book {
+  margin-top: 20px;
+  position: relative;
+  border-radius: 10px;
+  width: 180px;
+  height: 250px;
+  font-size: smaller;
+  font-weight: 500;
+  background-color: rgb(35, 131, 234);
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  color: whitesmoke;
+  background-color: rgb(40, 75, 247);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.cardplayer {
+  width: 190px;
+  margin: 20px;
+  height: 254px;
+  background: #3405a3;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px #100a886b;
+}
+
+.cardplayerplayer .card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #6b64f3;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.cardplayer span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.cardplayer .job {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 16px;
+}
+.topplayers{
+  font-family: 'Dosis', sans-serif;
+  color: whitesmoke;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.topplayer {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardplayer .img {
+  background-image: url("https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-21/ratings-collective/f20assets/player-headshots/20801.png");
+  width: 70px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: #6b64f3; */
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+.cardplayer .imgms {
+  background-image: url("https://sortitoutsi.net/uploads/face/7458500.png");
+  width: 70px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: #6b64f3; */
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+.cardplayer .imgkb {
+  background-image: url("https://www.futwiz.com/assets/img/fifa20/careerfaces/165153.png");
+  width: 70px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: #6b64f3; */
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.cardplayer button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #3405a3;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.cardplayer button:hover {
+  background: #fdfdfd;
+}
+
+.topclub{
+  font-family: 'Dosis', sans-serif;
+  color: whitesmoke;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.topclubs{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardclub {
+  overflow: visible;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #2e58a6;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -99;
+}
+
+.details {
+  position: absolute;
+  left: -10px;
+  right: 0;
+  bottom: 5px;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Image*/
+.imgbox {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.imgclub {
+  background:#2e58a6;
+  background-image: url("https://clipground.com/images/madrid-logo-png-2.png");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+}
+.imgclubbm {
+  background:#2e58a6;
+  background-image: url("https://logodownload.org/wp-content/uploads/2017/02/bayern-munich-logo.png");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+}
+.imgclubb {
+  background:#2e58a6;
+  background-image: url("https://logos-download.com/wp-content/uploads/2016/05/FC_Barcelona_logo_logotipo_crest.png");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+}
+.imgclubmc {
+  background:#2e58a6;
+  background-image: url("https://s3.amazonaws.com/freebiesupply/large/2x/manchester-city-logo-png-transparent.png");
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+}
+
+/*Text*/
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #1c1717;
+}
+
+.caption {
+  font-weight: 500;
+  font-size: 16px;
+  color: #051772;
+  display: block;
+  margin-top: 5px;
+}
+
+/*Hover*/
+.cardclub:hover .imgbox {
+  bottom: 80px;
+}
+
